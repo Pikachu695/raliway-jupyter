@@ -28,7 +28,7 @@ RUN ./ngrok authtoken '你的ngrok authtoken'
 RUN pip3 install jupyterlab
 RUN pip3 install jupyter_http_over_ws
 RUN jupyter notebook --generate-config
-RUN echo '#c.NotebookApp.allow_root = True' >> ~/.jupyter/jupyter_notebook_config.py
-RUN echo 'c.NotebookApp.ip = '0.0.0.0''
+RUN echo '#c.NotebookApp.allow_root = True' >> /root/.jupyter/jupyter_notebook_config.py
+RUN echo 'c.NotebookApp.ip = '0.0.0.0'' >> /root/.jupyter/jupyter_notebook_config.py
 RUN wget https://raw.githubusercontent.com/Pikachu695/SomeFile/main/colab.sh
 RUN wget https://raw.githubusercontent.com/Pikachu695/SomeFile/main/n.sh
